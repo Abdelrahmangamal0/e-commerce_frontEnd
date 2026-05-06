@@ -134,7 +134,7 @@ text-center
 <div className="relative z-10 max-w-2xl">
 
   <h1 className="text-4xl font-bold mb-4 text-white">
-    Welcome to E-Commerce
+    Welcome to SOUQ OKAZ
   </h1>
 
   <p className="text-lg mb-6 text-gray-100 dark:text-gray-300">

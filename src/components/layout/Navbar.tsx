@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { cartApi } from '@/lib/api/cart.api';
 import { NotificationBell } from '@/components/notifications/NotificationBell';
-import { orderApi } from "@/lib/api/order.api";
+// import logo from ;
 
 export const Navbar = () => {
   const { isAuthenticated, logout, user, isAdmin } = useAuth();
@@ -66,9 +66,17 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">E-Commerce</span>
-          </Link>
+{/* Logo */}
+<Link to="/" className="flex items-center gap-2">
+  <img
+    src={'src/assets/image.png'}
+    alt="Souq Okaz"
+    className="h-10 w-10 rounded-full object-cover ring-2 ring-primary-500/30"
+  />
+  <span className="text-xl font-bold text-primary-600 dark:text-primary-400">
+    SOUQ OKAZ
+  </span>
+</Link>
 
           
           {/* Desktop Navigation */}
