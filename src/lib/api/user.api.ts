@@ -1,5 +1,5 @@
 import { apiClient } from './client';
-import { PaginatedResponse, User, UsersResponse } from '@/types';
+import {  UsersResponse } from '@/types';
 
 export const userApi = {
   // Note: This endpoint needs to be added to the backend

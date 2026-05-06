@@ -138,8 +138,6 @@ export const AdminOrdersPage = () => {
               const canCancel =
                 order.status == OrderStatusEnum.Pending ||
                 order.status == OrderStatusEnum.Placed;
-  console.log(canCancel);
-  console.log(order);
   
               return (
                 <tr key={order._id} className="hover:bg-gray-50 dark:hover:bg-gray-700">

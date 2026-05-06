@@ -25,7 +25,7 @@ type UpdatePasswordForm = z.infer<typeof updatePasswordSchema>;
 export const ProfilePage = () => {
   const { user, refreshUser } = useAuth();
   const queryClient = useQueryClient();
-  const [isUploadingImage, setIsUploadingImage] = useState(false);
+  const [, setIsUploadingImage] = useState(false);
 
   const {
     register,
@@ -155,7 +155,7 @@ export const ProfilePage = () => {
 
         <form onSubmit={handleSubmit(onSubmitPassword)} className="space-y-4">
 
-          {["oldPassword", "newPassword", "confirmPassword"].map((field, i) => (
+          {["oldPassword", "newPassword", "confirmPassword"].map((field, ) => (
             <div key={field}>
               <input
                 {...register(field as any)}

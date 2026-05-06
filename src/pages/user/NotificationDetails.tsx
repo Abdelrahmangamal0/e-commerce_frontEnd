@@ -74,7 +74,7 @@ export const OfferDetails = ({ data }: any) => {
 };
 
 export const OrderDetails = ({ data }: any) => {
-  console.log(data);
+  // console.log(data);
   
   return (
     <div className="space-y-4">

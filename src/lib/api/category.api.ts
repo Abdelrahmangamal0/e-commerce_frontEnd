@@ -28,7 +28,7 @@ export const categoryApi = {
   },
 
   create: async (data: any, file?: File) => {
-    console.log(data);
+    // console.log(data);
 
     const formData = new FormData();
 
@@ -40,7 +40,7 @@ export const categoryApi = {
 
     if (data.brands) {
       data.brands.forEach((b: string) => {
-       console.log(b);
+      //  console.log(b);
        
         formData.append("brands[]", b);
       });

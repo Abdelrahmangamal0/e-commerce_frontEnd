@@ -1,5 +1,5 @@
 import { apiClient } from './client';
-import { LoginDto, LoginResponse, SignupDto, User, ProfileResponse } from '@/types';
+import { LoginDto, LoginResponse, SignupDto, User } from '@/types';
 import { tokenStorage } from './token.storage';
 
 export const authApi = {

@@ -184,7 +184,7 @@ if (orders.length === 0) {
   
       <div className="space-y-4">
         {orders.map((order: Order) => {
-  console.log(order);
+  // console.log(order);
   
           const canCancel =
             order.status === OrderStatusEnum.Pending ||

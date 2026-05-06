@@ -6,8 +6,6 @@ import { Heart, Trash2, ArrowLeft, ShoppingCart } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { useAuth } from '@/contexts/AuthContext';
 import { URL_Base } from '../admin/UsersPage';
-import { userApi } from '@/lib/api/user.api';
-import { authApi } from '@/lib/api/auth.api';
 import { productApi } from '@/lib/api/product.api';
 
 export const FavoritesPage = () => {
@@ -17,20 +15,14 @@ export const FavoritesPage = () => {
 
   // 🔥 get wishlist
   
-  const { data, isLoading } = useQuery({
+  const {  isLoading } = useQuery({
     queryKey: ['products'],
     queryFn: () => productApi.getAll(1, 100),
   });
   
   const wishlistIds = user?.wishList || [];
-  console.log(wishlistIds);
+  // console.log(wishlistIds);
   
-  const products =
-    data?.result?.filter((p: any) =>
-      wishlistIds.includes(p._id)
-        ) || [];
-    
-    console.log(data);
     
     
   // 🔥 remove from wishlist

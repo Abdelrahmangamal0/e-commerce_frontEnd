@@ -43,13 +43,7 @@ export const AdminCouponsPage = () => {
     return "Active";
   };
 
-  const statusColor = (status: string) => {
-
-    if (status === "Active") return "bg-green-100 text-green-700";
-    if (status === "Expired") return "bg-red-100 text-red-700";
-
-    return "bg-yellow-100 text-yellow-700";
-  };
+  
 
   return (
     <div className="space-y-6 text-gray-900 dark:text-gray-100">

@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { productApi } from '@/lib/api/product.api';
 import { formatCurrency } from '@/lib/utils';
-import { ShoppingCart, Heart, Search } from 'lucide-react';
+import {  Heart, Search } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { cartApi } from '@/lib/api/cart.api';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
@@ -78,13 +78,7 @@ const isInWishlist = (productId: string) =>
     addToCartMutation.mutate({ productId, quantity: 1 });
   };
 
-  const handleAddToWishlist = (productId: string) => {
-    if (!isAuthenticated) {
-      toast.error('Please login to add items to wishlist');
-      return;
-    }
-    addToWishlistMutation.mutate(productId);
-  };
+  
   
   
   const products = data?.result || [];

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { Package } from "lucide-react";
 import toast from "react-hot-toast";
 import { OrderStatusEnum } from "@/types";
-import { useEffect } from "react";
 
 export const OrdersPage = () => {
   const queryClient = useQueryClient();
@@ -67,7 +66,7 @@ export const OrdersPage = () => {
           const canCancel =
             order.status == OrderStatusEnum.Pending ||
             order.status == OrderStatusEnum.Placed;
-console.log(canCancel);
+// console.log(canCancel);
 
           return (
             <div

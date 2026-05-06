@@ -75,7 +75,7 @@ export const CreateProductModal = ({ onClose, onSuccess }: CreateProductModalPro
       toast.error('Please upload at least one image');
       return;
     }
-console.log(data);
+// console.log(data);
 
     createMutation.mutate({ formData: data, files });
   };

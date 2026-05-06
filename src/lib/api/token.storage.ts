@@ -6,7 +6,6 @@ const KEYS = {
 
 // Sentinel — returned when no signature exists in storage.
 // Distinct from 'Bearer' so callers can detect "not set" vs "explicitly Bearer".
-const NO_SIGNATURE = null;
 
 export const tokenStorage = {
   getAccess:    () => localStorage.getItem(KEYS.ACCESS),

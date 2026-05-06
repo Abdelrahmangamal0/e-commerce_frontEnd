@@ -1,12 +1,12 @@
 import { apiClient } from './client';
-import { CartResponse, CreateCartDto, RemoveItemsFromCartDto, Cart } from '@/types';
+import {  CreateCartDto, RemoveItemsFromCartDto, Cart } from '@/types';
 
 export const cartApi = {
   getCart: async (): Promise<Cart> => {
     const response = await apiClient.get<{ cart: Cart }>('/cart');
     // Backend returns: { message, status, data: { cart: Cart } }
     const cart = response.data.data?.cart;
-   console.log(cart);
+  //  console.log(cart);
    
     if (!cart) {
       throw new Error('Cart not found');
@@ -24,10 +24,10 @@ export const cartApi = {
   },
 
   removeFromCart: async (data: RemoveItemsFromCartDto): Promise<Cart> => {
-    console.log('respose', data);
+    // console.log('respose', data);
     
     const response = await apiClient.patch<{ cart: Cart }>('/cart', data);
-    console.log('response---------' , response);
+    // console.log('response---------' , response);
     
     const cart = response.data.data?.cart;
     

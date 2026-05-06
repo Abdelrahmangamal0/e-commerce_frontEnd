@@ -1,5 +1,5 @@
 import { apiClient } from './client';
-import { OrderResponse, CreateOrderDto, CheckoutSession, PaginatedResponse, Order } from '@/types';
+import {  CreateOrderDto, CheckoutSession, PaginatedResponse, Order } from '@/types';
 
 export const orderApi = {
   create: async (data: CreateOrderDto): Promise<Order> => {
@@ -22,12 +22,8 @@ export const orderApi = {
   },
 
   checkout: async (orderId: string): Promise<CheckoutSession> => {
-       console.log('her1');
        
        const response = await apiClient.post<{ session: CheckoutSession }>(`/order/${orderId}`);
-       console.log('her2');
-       console.log(response);
-       console.log('her3');
     
     // Backend returns: { message, status, data: { session: CheckoutSession } }
     const session = response.data.data?.session;

@@ -1,8 +1,7 @@
-import axios from 'axios';
 import { apiClient } from './client';
 import {
   Product,
-  ProductResponse,
+  
   PaginatedResponse,
   CreateProductDto,
 } from '@/types';
@@ -83,7 +82,7 @@ export const productApi = {
     removedAttachments: string[] = []
   ) => {
     const formData = new FormData();
-console.log(files.length);
+// console.log(files.length);
 
    if(files.length){
     files.forEach((file) => {
@@ -116,7 +115,7 @@ console.log(files.length);
 
   delete: async (productId: string) => {
     const response = await apiClient.delete(`/product/${productId}`);
-   console.log(response);
+  //  console.log(response);
    
     return response.data;
   },

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { couponApi } from "@/lib/api/coupon.api";
-import { X, ImagePlus } from "lucide-react";
 
 export const CreateCouponModal = ({ onClose, onSuccess }: any) => {
 

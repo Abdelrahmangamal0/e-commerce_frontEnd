@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import { userApi } from '@/lib/api/user.api';
 import { User, RoleEnum } from '@/types';
 import { formatDate } from '@/lib/utils';
@@ -85,16 +85,6 @@ const totalPages = data?.data?.users?.pages || 1;
     );
   });
 
-  const getRoleBadgeColor = (role: RoleEnum) => {
-    switch (role) {
-      case RoleEnum.SuperAdmin:
-        return 'bg-purple-100 text-purple-800';
-      case RoleEnum.Admin:
-        return 'bg-blue-100 text-blue-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
-  };
 
   return (
     <div className="space-y-6 text-gray-900 dark:text-gray-100">

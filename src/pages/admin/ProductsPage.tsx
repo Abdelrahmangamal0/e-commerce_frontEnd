@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useQuery, useMutation } from '@tanstack/react-query';
 import { productApi } from '@/lib/api/product.api';
 import { formatCurrency } from '@/lib/utils';
-import { Plus, Edit, Trash2, Archive, RefreshCw } from 'lucide-react';
+import { Plus, Edit, Trash2} from 'lucide-react';
 import { useQueryClient } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
 import { EditProductModal } from '@/components/admin/EditProductModal';
@@ -20,16 +20,7 @@ export const AdminProductsPage = () => {
     queryFn: () => productApi.getAll(page, 10),
   });
 
-  const deleteMutation = useMutation({
-    mutationFn: productApi.delete,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['products'] });
-      toast.success('Product deleted');
-    },
-    onError: () => {
-      toast.error('Failed to delete product');
-    },
-  });
+  
 
   const softDeleteMutation = useMutation({
     mutationFn: productApi.softDelete,
@@ -42,16 +33,7 @@ export const AdminProductsPage = () => {
     },
   });
 
-  const restoreMutation = useMutation({
-    mutationFn: productApi.restore,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['products'] });
-      toast.success('Product restored');
-    },
-    onError: () => {
-      toast.error('Failed to restore product');
-    },
-  });
+  
 
   const products = data?.result || [];
   const totalPages = data?.pages || 1;

@@ -53,7 +53,7 @@ export const Navbar = () => {
     };
   }, []); 
   
-  console.log(ordersCount);
+  // console.log(ordersCount);
   
   const cartItemCount = cartData?.products?.length || 0;
 

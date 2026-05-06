@@ -17,11 +17,11 @@ export const HomePage = () => {
   const {user , refreshUser, isAuthenticated } = useAuth();
   const queryClient = useQueryClient();
 
-  const [page, setPage] = useState(1);
+  const [page] = useState(1);
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
+  const [priceRange] = useState<[number, number]>([0, 5000]);
 
   const { data, isLoading } = useQuery({
     queryKey: ["products", page, search],
@@ -98,13 +98,6 @@ const isInWishlist = (productId: string) =>
     addToCartMutation.mutate({ productId, quantity: 1 });
   };
 
-  const handleAddToWishlist = (productId: string) => {
-    if (!isAuthenticated) {
-      toast.error("Please login first");
-      return;
-    }
-    addToWishlistMutation.mutate(productId);
-  };
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-10 

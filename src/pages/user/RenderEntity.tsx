@@ -8,7 +8,7 @@ type Props = {
   export const RenderEntity = ({ kind, data }: Props) => {
     switch (kind) {
       case "Offer":
-       console.log(data);
+      //  console.log(data);
        
         return <OfferDetails data={data.data.data.coupon} />;
   
@@ -16,7 +16,7 @@ type Props = {
         return <ProductDetails data={data} />;
   
       case "Order":
-       console.log(data);
+      //  console.log(data);
        
         return <OrderDetails data={data.data.data.order} />;
   
