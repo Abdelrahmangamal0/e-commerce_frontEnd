@@ -4,7 +4,7 @@ import { userApi } from '@/lib/api/user.api';
 import { User, RoleEnum } from '@/types';
 import { formatDate } from '@/lib/utils';
 import { AlertCircle, RefreshCw, Search, User as UserIcon } from 'lucide-react';
-export const URL_Base = 'https://souqokaz.it.com/upload'
+export const URL_Base = 'https://api.souqokaz.it.com/upload'
 export const AdminUsersPage = () => {
   const [page, setPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
