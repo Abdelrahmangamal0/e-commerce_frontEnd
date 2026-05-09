@@ -7,7 +7,7 @@ import axios, {
 import { ApiResponse } from '@/types';
 import { tokenStorage } from './token.storage';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://souqokaz.it.com';
 
 // How many seconds before expiry to proactively refresh.
 // 60s gives enough runway without being wasteful.
