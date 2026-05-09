@@ -243,6 +243,14 @@ export const Navbar = () => {
                   >
                     Profile
                   </Link>
+                  <Link
+  to="/favorites"
+  className="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center gap-2"
+  onClick={() => setMobileMenuOpen(false)}
+>
+  <Heart className="h-5 w-5" />
+  Favorites
+</Link>
                   {isAdmin && (
                     <Link
                       to="/admin"
