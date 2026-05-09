@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import { cartApi } from '@/lib/api/cart.api';
 import { NotificationBell } from '@/components/notifications/NotificationBell';
 // import logo from ;
-
+import image from '../../assets/image.png';
 export const Navbar = () => {
   const { isAuthenticated, logout, user, isAdmin } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -69,7 +69,7 @@ export const Navbar = () => {
 {/* Logo */}
 <Link to="/" className="flex items-center gap-2">
   <img
-    src={'src/assets/image.png'}
+    src={image}
     alt="Souq Okaz"
     className="h-10 w-10 rounded-full object-cover ring-2 ring-primary-500/30"
   />
